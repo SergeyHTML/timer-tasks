@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My task</title>
+</head>
+<body>
+<h1>My tasks!</h1>
+
+    <div id="container"></div>
+<script>
+  // You can also require other files to run in this process
+  var bundlePath = './build/bundle.js';
+
+  if(typeof process !== 'undefined' && process.env.NODE_ENV === 'DEV') {
+    const port = process.env.PORT || 8080;
+    bundlePath = `http://127.0.0.1:${port}/build/bundle.js`;
+    var bundleScriptEl = document.createElement('script');
+    bundleScriptEl.src = bundlePath;
+    bundleScriptEl.async = true;
+    document.currentScript.parentNode.insertBefore(bundleScriptEl, document.currentScript);
+  } else {
+    require(bundlePath);
+  }
+</script>
+    <!--<script src="/static/bundle.js"></script>-->
+</body>
+</html>

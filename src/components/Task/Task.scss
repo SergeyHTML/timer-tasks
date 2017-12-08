@@ -1,0 +1,18 @@
+.task-row{
+  >div{
+    display: inline-block;
+  }
+  a{
+    display: inline-block;
+    margin-right: 15px;
+  }
+}
+.task-row__name{
+  width: 50%;
+}
+.task-row__status{
+  width: 10%;
+}
+.task-row__time{
+  width:10%;
+}
