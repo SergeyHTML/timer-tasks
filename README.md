@@ -1,5 +1,5 @@
 # timer-tasks
 
-npm install / yarn
-npm run build
+npm install / yarn <br>
+npm run build <br>
 npm run electron
